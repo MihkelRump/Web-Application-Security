@@ -1,0 +1,48 @@
+
+<!-- saved from url=(0038)https://webappsec.cs.ut.ee/xss/csp.php -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'nonce-ABC123' "./Powered by JavaScript_files/leaflet.js.download"; base-uri 'none'; style-src 'self' 'nonce-ABC123'">
+    <title>Powered by JavaScript</title>
+    <link rel="stylesheet" href="./Powered by JavaScript_files/leaflet.css">
+  </head>
+  <body>
+    <script nonce="ABC123">
+        window.onload = function () {
+          var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+          console.log('Page load time is '+ loadTime);
+        }
+    </script>
+
+     <div id="map" style="width: 600px; height: 400px; position: relative; outline: none;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" >
+      <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+        <div class="leaflet-pane leaflet-tile-pane">
+          <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+            <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="./Powered by JavaScript_files/9803.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(245px, 3px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9802.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(245px, -253px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9803(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-11px, 3px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9803(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(501px, 3px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9804.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(245px, 259px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9802(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-11px, -253px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9802(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(501px, -253px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9804(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-11px, 259px, 0px); opacity: 1;"><img alt="" role="presentation" src="./Powered by JavaScript_files/9804(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(501px, 259px, 0px); opacity: 1;"></div>
+          </div>
+        </div>
+        <div class="leaflet-pane leaflet-shadow-pane"></div>
+        <div class="leaflet-pane leaflet-overlay-pane"></div>
+        <div class="leaflet-pane leaflet-marker-pane"></div>
+        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+        <div class="leaflet-pane leaflet-popup-pane"></div>
+        <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(4.81695e+06px, 2.50977e+06px, 0px) scale(16384);"></div>
+      </div>
+      <div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="https://webappsec.cs.ut.ee/xss/csp.php#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="https://webappsec.cs.ut.ee/xss/csp.php#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a></div></div></div></div>
+
+    <a href="javascript:alert(&#39;Sorry, this functionality is not implemented yet!&#39;)">Show statistics</a>
+
+    <script nonce="ABC123" src="./Powered by JavaScript_files/leaflet.js.download"></script>
+
+    <script nonce="ABC123">
+      var map = L.map('map').setView([58.38, 26.7211], 15);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+         maxZoom: 18
+         }).addTo(map);
+    </script>
+
+  
+
+</body>
+</html>
